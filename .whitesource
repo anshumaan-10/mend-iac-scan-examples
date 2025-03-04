@@ -1,10 +1,22 @@
 {
   "scanSettings": {
     "enableIaC": true,
-    "baseBranches": ["integration"]
+    "baseBranches": ["integration", "main"], 
+    "iacSeverityThreshold": "high" 
   },
   "checkRunSettings": {
     "useMendCheckNames": true,
-    "iacCheckRunConclusionLevel": "failure"
+    "iacCheckRunConclusionLevel": "failure",
+    "failOnIacFindings": true 
+  },
+  "releaseBranchSettings": {
+    "checkRunSettings": {
+      "failOnIaCViolation": true
+    }
+  },
+  "issueSettings": {
+    "iacIssues": true,
+    "customLabels": ["IaC Security", "Mend-IaC"],
+    "assignees": ["anshumaan-10"]
   }
 }
