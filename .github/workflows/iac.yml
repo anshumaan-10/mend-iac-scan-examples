@@ -35,7 +35,7 @@ jobs:
         chmod +x /usr/local/bin/mend
 
         echo "Running Mend IAC scan"
-        mend iac . -non-interactive --no-upload
+        mend iac . 
 
     # - name: Upload Scan Results
     #   uses: actions/upload-artifact@v4
