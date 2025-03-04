@@ -14,7 +14,7 @@
 name: Mend CLI Scan
 
 on:
-  push:
+  push: 
     branches: [ main ]
 
 jobs:
